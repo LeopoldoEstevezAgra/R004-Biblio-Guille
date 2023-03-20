@@ -16,3 +16,22 @@
   width: 100%;
   flex: 1;
 }
+
+.card {
+  width: 400px;
+  height: 300px;
+  display: flex;
+}
+
+.cardImage {
+  width: 150px;
+}
+
+.cardContent {
+  flex: 1;
+  padding: 0.2rem;
+}
+
+.cardTitle {
+  margin-bottom: 0.5rem;
+}
