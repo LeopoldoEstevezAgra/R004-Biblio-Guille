@@ -13,14 +13,20 @@
 }
 
 .booklistContainer {
+  margin-top: 2rem;
   width: 100%;
   flex: 1;
+  display: flex;
+  gap: 1rem;
 }
 
 .card {
   width: 400px;
   height: 300px;
   display: flex;
+  background-color: rgb(var(--color-accent));
+  border: 0.25rem solid rgb(var(--color-tertiary));
+  border-radius: 2rem;
 }
 
 .cardImage {

@@ -13,7 +13,8 @@ type bookType = {
   titulo: string,
   autor: string | null,
   anho_publicacion: string | null,
-  editorial: string
+  editorial: string,
+  img: string
 };
 
 const Home: React.FC= () => {
@@ -38,7 +39,7 @@ const Home: React.FC= () => {
   }, [])
   return (
     <div className={styles.container}>
-      <pre> { JSON.stringify(books, null, 2)} </pre>
+      {/*<pre> { JSON.stringify(books, null, 2)} </pre>*/}
       <div className={styles.searchInputContainer}>
         <RoundedInput 
           icon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
@@ -49,7 +50,7 @@ const Home: React.FC= () => {
         {books && books.length && books.map((book: bookType) => {
           return (
             <div className={styles.card} key={book.id}>
-              <div className={styles.cardImage}></div>
+              <div className={styles.cardImage}><img src={book.img} alt="portada" /></div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}> {book.titulo} </h3>
                 <div> {book.isbn} </div>

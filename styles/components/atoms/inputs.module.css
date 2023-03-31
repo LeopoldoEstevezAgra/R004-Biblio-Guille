@@ -23,10 +23,15 @@
     height: 100%;
 }
 
+
 .roundedInputSearchButton {
     outline: none;
     border: none;
     cursor: pointer;
     background-color: inherit;
     width: 1.3rem;
+}
+.noBorder{
+    border: none;
+  outline: none;
 }

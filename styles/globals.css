@@ -1,11 +1,12 @@
 :root {
-  --color-primary: 65, 103,136;
-  --color-secondary: 181, 186,208;
-  --color-tertiary: 115, 137, 174;
-  --color-accent: 129, 210, 199;
+  --color-primary: 211, 74, 83;
+  --color-secondary: 9, 80, 113;
+  --color-tertiary: 61, 145, 164;
+  --color-accent: 188, 218, 220;
+  
+  --color-bg: 246, 224, 223;
 
-  --color-bg: 224, 224, 226;
-
+  --color-negro: 2, 13, 19;
   --color-white: 255,255,255;
 }
 
@@ -13,7 +14,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: 1px solid lime;
+  /*outline: 1px solid lime;*/
 }
 
 html,
