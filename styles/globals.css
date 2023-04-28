@@ -1,19 +1,30 @@
 :root {
   --color-primary: 211, 74, 83;
   --color-secondary: 9, 80, 113;
+  /* verdes*/
+  --color-tertiary: 59, 112, 51;
+  --color-accent: 218, 224, 204;
+  
+  /* marrones
+  --color-tertiary: 72, 31, 30;
+  --color-accent: 210, 178, 177;*/
+  
+  /* azules
   --color-tertiary: 61, 145, 164;
-  --color-accent: 188, 218, 220;
+  --color-accent: 229, 247, 125;*/
   
   --color-bg: 246, 224, 223;
 
   --color-negro: 2, 13, 19;
   --color-white: 255,255,255;
+  --font-small: 12px;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   /*outline: 1px solid lime;*/
 }
 

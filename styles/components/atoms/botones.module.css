@@ -1,0 +1,18 @@
+.solidButton{
+    background-color: rgb(var(--color-tertiary));
+    cursor: pointer;
+    color: rgb(var(--color-accent));
+    border: none;
+    padding: 9px;
+    font-weight: 700;
+    width: 92px;
+}
+.ghostButton{
+    background-color: rgb(var(--color-accent));
+    cursor: pointer;
+    color: rgb(var(--color-tertiary));
+    border: 2px solid rgb(var(--color-tertiary));
+    padding: 5px;
+    font-weight: 700;
+    width: 92px;
+}
