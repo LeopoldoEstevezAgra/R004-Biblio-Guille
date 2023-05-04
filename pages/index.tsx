@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,20 +13,19 @@ import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
 
 
 type bookType = {
-  id: number,
-  created_at: string,
-  isbn: string,
-  titulo: string,
-  autor: string | null,
-  anho_publicacion: string | null,
-  editorial: string,
-  portada: string,
-  categorias: categoriaType[]
+  id: number;
+  titulo: string;
+  isbn: string;
+  autor: string;
+  editorial: string;
+  anho_publicacion: number;
+  portada: string;
+  categorias: {
+    id: number;
+    nombre: string;
+  }[];
 };
-type categoriaType = {
-  id: number,
-  nombre: string
-};
+
 const Home: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [books, setBooks] = useState<Array<bookType>>([]);
@@ -70,7 +70,10 @@ const Home: React.FC = () => {
                   <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre}/>
                 ))}
               </div>
-              <div className={styles.cardFooter}><InfBoton /> <PedirBoton /></div>
+              <div className={styles.cardFooter}>
+              <Link href="/infolibro/[id]" as={`/infolibro/${book.id}`}><InfBoton /></Link>
+                <PedirBoton />
+              </div>
             </div>
           );
         })}
