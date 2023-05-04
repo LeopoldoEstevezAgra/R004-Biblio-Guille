@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/InfoLibro.module.css';
 
 import InfBoton from '@/components/atoms/InfBoton';
 import PedirBoton from '@/components/atoms/PedirBoton';
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
+import { link } from 'fs';
 
 type bookType = {
   id: number;
@@ -53,25 +55,35 @@ const InfoLibro = () => {
   }, [id]);
 
   if (!libro) {
-    return <div>Cargando...</div>;
+    return (
+      <div>
+        <Link href="/"><button>Volver al Catálogo</button></Link>
+        <div>Cargando...</div>
+      </div>
+    );
   }
 
   return (
-    <div className={styles.card} key={libro.id}>
-      <div className={styles.cardImage}><img className={styles.portada} src={libro.portada} alt="portada" /></div>
-      <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}> {libro.titulo} </h3>
-        <div> {libro.autor} </div>
-        <div> {libro.editorial}, {libro.anho_publicacion}  </div>
-      </div>
-      <div className={styles.cardCategories}>
-        {libro.categorias.map(categoria => (
-          <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
-        ))}
-      </div>
-      <div className={styles.cardFooter}>
-        <PedirBoton />
-      </div>
+    <div>
+      <Link href="/"><button>Volver al Catálogo</button></Link>
+      <main  key={libro.id}>
+        <div ><img src={libro.portada} alt="portada" /></div>
+        <div >
+          <h3 > {libro.titulo} </h3>
+          <div> {libro.autor} </div>
+          <div> {libro.editorial}, {libro.anho_publicacion}  </div>
+        </div>
+        <div>
+          {libro.categorias.map(categoria => (
+            <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
+          ))}
+        </div>
+        <div>
+          <PedirBoton />
+        </div>
+      </main>
+      <div>Reseñas</div>
+      <aside>libros recomendados</aside>
     </div>
   );
 };
