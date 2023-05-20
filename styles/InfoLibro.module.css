@@ -1,0 +1,68 @@
+
+
+
+
+.card {
+    display: grid;
+    grid-template-areas: 'img info'
+        'img cat'
+        'img sinopsis'
+        'foot sinopsis';
+    grid-template-columns: clamp(150px, 45% ,450px) clamp(150px, 55% ,auto);
+
+    -webkit-box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
+    box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
+    width: 95%;
+}
+
+.cardImage {
+    grid-area: img;
+    margin: 5px;
+    display: flex;
+}
+
+.portada {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardContent {
+    grid-area: info;
+    flex: 1;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle {
+    margin-bottom: 0.5rem;
+}
+
+.cardCategories {
+    grid-area: cat;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.sinopsis{
+    grid-area: sinopsis;
+    text-align: justify;
+}
+
+.cardFooter {
+    grid-area: foot;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recomendados{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 0.25rem;
+    justify-content: flex-start
+}
+

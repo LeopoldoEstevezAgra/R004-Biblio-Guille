@@ -2,12 +2,13 @@ import React from 'react';
 import styles from '@/styles/components/atoms/tarjetaCategoria.module.css';
 
 interface IProps {
-    nombreCategoria?: any;
+    nombreCategoria?: string;
+    small?: boolean;
 };
 
-const TarjetaCategoria: React.FC<IProps> = ({nombreCategoria}) => {
+const TarjetaCategoria: React.FC<IProps> = ({nombreCategoria, small}) => {
     return (
-      <div className={styles.container}><div className={styles.round}></div>
+      <div className={small ?  styles.smallContainer : styles.container}><div className={small ? styles.smallRound : styles.round}></div>
       <span>{nombreCategoria}</span>
       
       </div>

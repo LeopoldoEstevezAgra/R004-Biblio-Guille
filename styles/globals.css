@@ -18,6 +18,8 @@
   --color-negro: 2, 13, 19;
   --color-white: 255,255,255;
   --font-small: 12px;
+  --font-extrasmall: 10.5px;
+
 }
 
 * {

@@ -1,18 +1,39 @@
+
 .solidButton{
     background-color: rgb(var(--color-tertiary));
     cursor: pointer;
     color: rgb(var(--color-accent));
     border: none;
-    padding: 9px;
+    padding: 7px;
     font-weight: 700;
     width: 92px;
+}
+.smallSolidButton{
+    background-color: rgb(var(--color-tertiary));
+    font-size: 10.5px;
+    cursor: pointer;
+    color: rgb(var(--color-accent));
+    border: none;
+    padding: 6px;
+    font-weight: 700;
+    width: 64px; 
 }
 .ghostButton{
     background-color: rgb(var(--color-accent));
     cursor: pointer;
     color: rgb(var(--color-tertiary));
-    border: 2px solid rgb(var(--color-tertiary));
+    border: 2.5px solid rgb(var(--color-tertiary));
     padding: 5px;
     font-weight: 700;
     width: 92px;
+}
+.smallGhostButton{
+    background-color: rgb(var(--color-accent));
+    cursor: pointer;
+    color: rgb(var(--color-tertiary));
+    border: 2px solid rgb(var(--color-tertiary));
+    font-size: 10.5px;
+    padding: 4px;
+    font-weight: 700;
+    width: 64px; 
 }

@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 import styles from '@/styles/InfoLibro.module.css';
 
-import InfBoton from '@/components/atoms/InfBoton';
+
 import PedirBoton from '@/components/atoms/PedirBoton';
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
-import { link } from 'fs';
+import TarjetaLibroMini from '@/components/TarjetaLibroMini';
 
 type bookType = {
   id: number;
@@ -17,10 +17,19 @@ type bookType = {
   editorial: string;
   anho_publicacion: number;
   portada: string;
+  sinopsis: string;
   categorias: {
     id: number;
     nombre: string;
   }[];
+};
+type resenhaType = {
+  id:number;
+  titulo:string,
+  valoracion:number,
+  descripcion:string,
+  created_at:number,
+  nombreCompleto:string
 };
 
 const InfoLibro = () => {
@@ -28,9 +37,11 @@ const InfoLibro = () => {
   const { id } = router.query;
 
   const [libro, setLibro] = useState<bookType | null>(null);
+  const [recoms, setRecoms] = useState<Array<bookType>>([]);
+  const [resenhas, setResenhas] = useState<Array<resenhaType>>([]);
 
   const fetchBook = async (id: string) => {
-    const response = await fetch(`/api/infolibro?id=${id}`);
+    const response = await fetch(`/api/infolibro/infolibro?id=${id}`);
     if (response.ok) {
       const data = await response.json();
       return data as bookType;
@@ -39,7 +50,36 @@ const InfoLibro = () => {
       throw new Error('No se pudo obtener el libro');
     }
   };
-
+  /*const fetchresenha = async (cat: string) => {
+    const response = await fetch(`/api/infolibro/resenhas?id=${id}`);
+    if (response.ok) {
+      const data = await response.json();
+      return data as bookType;
+    } else {
+      setLibro(null);
+      throw new Error('No se pudo obtener el libro');
+    }
+  };*/
+  const fetchrecom = async (id: string) => {
+    const response = await fetch(`/api/infolibro/recomendados?id=${id}`);
+    if (response.ok) {
+      const data = await response.json();
+      return data as Array<bookType>;
+    } else {
+      setRecoms([]);
+      throw new Error('No se pudo obtener el libro');
+    }
+  };
+  const fetchresenhas = async (id: string) => {
+    const response = await fetch(`/api/infolibro/resenhas?id=${id}`);
+    if (response.ok) {
+      const data = await response.json();
+      return data as Array<resenhaType>;
+    } else {
+      setResenhas([]);
+      throw new Error('No se pudo obtener resenhas');
+    }
+  };
   useEffect(() => {
     const getLibro = async () => {
       try {
@@ -49,41 +89,76 @@ const InfoLibro = () => {
         console.error(error);
       }
     };
+    const getRecomendados = async () => {
+      try {
+        const data = await fetchrecom(id as string);
+        setRecoms(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    const getResenhas = async () => {
+      try {
+        const data = await fetchresenhas(id as string);
+        setResenhas(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     if (id) {
       getLibro();
+      getRecomendados();
+      getResenhas();
     }
   }, [id]);
-
   if (!libro) {
     return (
       <div>
         <Link href="/"><button>Volver al Catálogo</button></Link>
         <div>Cargando...</div>
+        
       </div>
     );
   }
-
   return (
-    <div>
-      <Link href="/"><button>Volver al Catálogo</button></Link>
-      <main  key={libro.id}>
-        <div ><img src={libro.portada} alt="portada" /></div>
-        <div >
-          <h3 > {libro.titulo} </h3>
-          <div> {libro.autor} </div>
-          <div> {libro.editorial}, {libro.anho_publicacion}  </div>
-        </div>
-        <div>
-          {libro.categorias.map(categoria => (
-            <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
-          ))}
-        </div>
-        <div>
-          <PedirBoton />
+    <div className={styles.body}>
+      <Link href="/" className={styles.volver}><button>Volver al Catálogo</button></Link>
+      <main className={styles.main} key={libro.id}>
+        <div className={styles.card} key={libro.id}>
+          <div className={styles.cardImage}>
+            <img className={styles.portada} src={libro.portada} alt="portada" />
+          </div>
+          <div className={styles.cardContent}>
+            <h3 className={styles.cardTitle}>{libro.titulo}</h3>
+            <div>{libro.autor}</div>
+            <div>
+              {libro.editorial}, {libro.anho_publicacion}
+            </div>
+          </div>
+          <div className={styles.cardCategories}>
+            {libro.categorias.map((categoria) => (
+              <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
+            ))}
+          </div>
+          <div className={styles.sinopsis}>{libro.sinopsis}</div>
+          <div className={styles.cardFooter}>
+            <PedirBoton />
+          </div>
         </div>
       </main>
-      <div>Reseñas</div>
-      <aside>libros recomendados</aside>
+      <aside className={styles.aside}>
+        <h2>Libros recomendados</h2>
+        <div className={styles.recomendados}>
+          {recoms && recoms.length && recoms.map((book: bookType, index: number) => {
+          return (<TarjetaLibroMini key={index} book={book}></TarjetaLibroMini>)
+           })}
+        </div>
+      </aside>
+      <div className={styles.resenhasContainer}>Reseñas
+        <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType) => {
+          return (<ul><li key={resenha.id}>{resenha.titulo}</li></ul>)
+           })}</div>
+      </div>
     </div>
   );
 };

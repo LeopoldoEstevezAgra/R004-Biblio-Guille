@@ -11,6 +11,19 @@
     align-items: center;
     font-size: var(--font-small);
 }
+.smallContainer{
+    background-color: rgb(var(--color-white));
+    display: flex;
+    padding: 3.5px;
+    color: rgb(var(--color-secondary));
+    border: 2px solid rgb(var(--color-secondary));
+    margin-bottom: 5px;
+    width: max-content;
+    height: 1.25rem;
+    border-radius: 50px 0 0 50px;
+    align-items: center;
+    font-size: var(--font-extrasmall);
+}
 .round{
     background-color: rgb(var(--color-accent));
     color: rgb(var(--color-accent));
@@ -18,5 +31,14 @@
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
+    margin-right: 5px;
+}
+.smallRound{
+    background-color: rgb(var(--color-accent));
+    color: rgb(var(--color-accent));
+    border: 2px solid rgb(var(--color-secondary));
+    border-radius: 50%;
+    width: 0.62rem;
+    height: 0.62rem;
     margin-right: 5px;
 }
