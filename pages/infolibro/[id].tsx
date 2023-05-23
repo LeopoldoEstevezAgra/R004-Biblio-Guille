@@ -8,6 +8,7 @@ import styles from '@/styles/InfoLibro.module.css';
 import PedirBoton from '@/components/atoms/PedirBoton';
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
 import TarjetaLibroMini from '@/components/TarjetaLibroMini';
+import TarjetaResenha from '@/components/TarjetaResenha';
 
 type bookType = {
   id: number;
@@ -28,10 +29,10 @@ type resenhaType = {
   titulo:string,
   valoracion:number,
   descripcion:string,
-  created_at:number,
+  created_at: number,
   nombreCompleto:string
 };
-
+const ejemplo = {id:1, titulo:"uwu", valoracion:3, descripcion:"eeeeese", created_at:1 , nombreCompleto:"Emiliano Marcial Otero" }
 const InfoLibro = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -149,15 +150,17 @@ const InfoLibro = () => {
       <aside className={styles.aside}>
         <h2>Libros recomendados</h2>
         <div className={styles.recomendados}>
-          {recoms && recoms.length && recoms.map((book: bookType, index: number) => {
+          {recoms && recoms.length && recoms.map((book: bookType, index) => {
           return (<TarjetaLibroMini key={index} book={book}></TarjetaLibroMini>)
            })}
         </div>
       </aside>
       <div className={styles.resenhasContainer}>Reseñas
-        <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType) => {
-          return (<ul><li key={resenha.id}>{resenha.titulo}</li></ul>)
+        <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType, index) => {
+          return (<TarjetaResenha key={index} resenha={resenha}/>)
            })}</div>
+        
+        <TarjetaResenha resenha={ejemplo}/>
       </div>
     </div>
   );

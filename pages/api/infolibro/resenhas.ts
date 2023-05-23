@@ -9,14 +9,13 @@ export default async function handler(
   console.log('se ha realizado una llamada resenhas')
   const { id } = req.query;
   console.log(id)
-  const { data: resenhas, error: resenhasError } = await supabase.rpc('resenhas', { reqid: id })
-
+  const { data: resenhacompleta, error: resenhasError } = await supabase.rpc('resenhas', { reqid: id })
 
   if (resenhasError) {
     return res.status(400).json({ error: 'error '})
   }
-  console.log(resenhas)
+  console.log(resenhacompleta)
   console.log(resenhasError)
-  res.status(200).json(resenhas)
+  res.status(200).json(resenhacompleta)
   
 }

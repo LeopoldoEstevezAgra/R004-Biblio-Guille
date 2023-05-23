@@ -49,6 +49,7 @@
 .sinopsis{
     grid-area: sinopsis;
     text-align: justify;
+    width: 95%;
 }
 
 .cardFooter {
