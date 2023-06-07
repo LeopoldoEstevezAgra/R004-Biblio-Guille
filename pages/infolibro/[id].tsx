@@ -30,9 +30,8 @@ type resenhaType = {
   valoracion:number,
   descripcion:string,
   created_at: number,
-  nombreCompleto:string
+  nombrecompleto:string
 };
-const ejemplo = {id:1, titulo:"uwu", valoracion:3, descripcion:"eeeeese", created_at:1 , nombreCompleto:"Emiliano Marcial Otero" }
 const InfoLibro = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -159,8 +158,6 @@ const InfoLibro = () => {
         <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType, index) => {
           return (<TarjetaResenha key={index} resenha={resenha}/>)
            })}</div>
-        
-        <TarjetaResenha resenha={ejemplo}/>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ export default async function handler(
   if (resenhasError) {
     return res.status(400).json({ error: 'error '})
   }
+
   console.log(resenhacompleta)
   console.log(resenhasError)
   res.status(200).json(resenhacompleta)

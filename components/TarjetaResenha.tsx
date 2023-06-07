@@ -8,7 +8,7 @@ type resenhaType = {
     valoracion:number,
     descripcion:string,
     created_at:number,
-    nombreCompleto:string
+    nombrecompleto:string
   };
 
 type ResenhaCardProps = {
@@ -19,7 +19,7 @@ const TarjetaResenha: React.FC<ResenhaCardProps> = ({ resenha }) => {
   return (
     <div className={styles.card} key={resenha.id}>
       <header className={styles.cardHeader}>
-        <Corazones valoracion={resenha.valoracion}/> <h3>{resenha.titulo}</h3> <span>{resenha.nombreCompleto}</span>
+        <Corazones valoracion={resenha.valoracion}/> <h3>{resenha.titulo}</h3> <span>{resenha.nombrecompleto}</span>
       </header>
       <main className={styles.cardContent}>
         {resenha.descripcion}
