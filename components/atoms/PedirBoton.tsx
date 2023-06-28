@@ -7,7 +7,7 @@ interface Props {
 
 const PedirBoton: React.FC<Props> = ({ small }) => {
   return (
-    <button className={small ? styles.smallSolidButton : styles.solidButton}>
+    <button className={small ? styles.sBotonPrim : styles.lBotonPrim}>
       Añadir
     </button>
   );

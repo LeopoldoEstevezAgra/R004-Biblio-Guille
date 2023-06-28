@@ -1,8 +1,13 @@
 .corazonesRellenos{
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 .corazonesHuecos{
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
+}
+.listaCorazones{
+    display: flex;
+    width: 88px;
+    justify-content: space-between;
 }

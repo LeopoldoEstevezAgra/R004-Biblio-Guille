@@ -8,7 +8,7 @@ interface Props {
 
 const InfBoton: React.FC<Props> = ({ small }) => {
   return (
-    <button className={small ? styles.smallGhostButton : styles.ghostButton}>
+    <button className={small ? styles.sBotonSec : styles.lBotonSec}>
       Más info.
     </button>
   );

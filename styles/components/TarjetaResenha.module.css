@@ -1,4 +1,22 @@
 .card{
-    width: 90%;
-    border: 4px solid rgb(var(--color-secondary));
+    margin-top: 1rem;
+    padding-left: 6px;
+    border-left: 3px solid rgb(var(--fondoenfasis));
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    flex-wrap: wrap;
+    
+    /*display: grid;
+    grid-template-columns: 15% auto 25%;*/
+}
+.cardContent{
+    text-align: justify;
+    margin-top: 0.25rem;
+}
+.cardFooter{
+    text-align: end;
+    font-size: var(--font-small);
 }

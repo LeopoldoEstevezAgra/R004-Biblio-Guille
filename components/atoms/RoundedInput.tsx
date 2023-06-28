@@ -23,9 +23,9 @@ const RoundedInput: React.FC<IProps> = ({ icon, onChange }) => {
       <div className={styles.roundedInputContainer}>
         <input
           className={`${styles.roundedInput} ${isFocused && styles.noBorder}`}
-          onChange={(e) => {
+          /*onChange={(e) => {
             onChange?.(e);
-          }}
+          }}*/
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           style={{ border: 'none' }}

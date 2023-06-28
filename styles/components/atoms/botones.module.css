@@ -1,39 +1,44 @@
 
-.solidButton{
-    background-color: rgb(var(--color-tertiary));
+.lBotonPrim{
+    background-color: rgb(var(--botonprim));
     cursor: pointer;
-    color: rgb(var(--color-accent));
+    color: rgb(var(--fondo));
     border: none;
+    padding: 7px;
+    letter-spacing: 1px;
+    width: 92px;
+    border-radius: 5px;
+}
+.sBotonPrim{
+    background-color: rgb(var(--botonprim));
+    font-size: 10.5px;
+    cursor: pointer;
+    color: rgb(var(--fondo));
+    border: none;
+    padding: 6px;
+    letter-spacing: 0.35px;
+    font-weight: 700;
+    width: 64px;
+    border-radius: 2.5px; 
+}
+.lBotonSec{
+    background-color: rgb(var(--botonsec));
+    border: none;
+    cursor: pointer;
+    color: rgb(var(--texto));
     padding: 7px;
     font-weight: 700;
     width: 92px;
+    border-radius: 5px;
 }
-.smallSolidButton{
-    background-color: rgb(var(--color-tertiary));
-    font-size: 10.5px;
-    cursor: pointer;
-    color: rgb(var(--color-accent));
+.sBotonSec{
+    background-color: rgb(var(--botonsec));
     border: none;
+    cursor: pointer;
+    color: rgb(var(--texto));
+    font-size: 10.5px;
     padding: 6px;
     font-weight: 700;
     width: 64px; 
-}
-.ghostButton{
-    background-color: rgb(var(--color-accent));
-    cursor: pointer;
-    color: rgb(var(--color-tertiary));
-    border: 2.5px solid rgb(var(--color-tertiary));
-    padding: 5px;
-    font-weight: 700;
-    width: 92px;
-}
-.smallGhostButton{
-    background-color: rgb(var(--color-accent));
-    cursor: pointer;
-    color: rgb(var(--color-tertiary));
-    border: 2px solid rgb(var(--color-tertiary));
-    font-size: 10.5px;
-    padding: 4px;
-    font-weight: 700;
-    width: 64px; 
+    border-radius: 2.5px;
 }

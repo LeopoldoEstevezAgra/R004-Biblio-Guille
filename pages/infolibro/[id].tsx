@@ -122,7 +122,7 @@ const InfoLibro = () => {
   }
   return (
     <div className={styles.body}>
-      <Link href="/" className={styles.volver}><button>Volver al Catálogo</button></Link>
+      <Link href="/" ><button className={styles.volver}>&lt;&lt;</button></Link>
       <main className={styles.main} key={libro.id}>
         <div className={styles.card} key={libro.id}>
           <div className={styles.cardImage}>
@@ -146,15 +146,16 @@ const InfoLibro = () => {
           </div>
         </div>
       </main>
-      <aside className={styles.aside}>
-        <h2>Libros recomendados</h2>
+      <div className={styles.recomContainer}>
+        <h2 className={styles.h2secc}>Libros recomendados</h2>
         <div className={styles.recomendados}>
           {recoms && recoms.length && recoms.map((book: bookType, index) => {
           return (<TarjetaLibroMini key={index} book={book}></TarjetaLibroMini>)
            })}
         </div>
-      </aside>
-      <div className={styles.resenhasContainer}>Reseñas
+      </div>
+      <div className={styles.resenhasContainer}>
+        <h2 className={styles.h2secc}>Reseñas</h2>
         <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType, index) => {
           return (<TarjetaResenha key={index} resenha={resenha}/>)
            })}</div>

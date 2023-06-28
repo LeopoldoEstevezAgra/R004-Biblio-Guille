@@ -1,5 +1,14 @@
-
-
+.volver{
+    border: none;
+    font-size: 24px;
+    background-color: rgb(var(--fondo));
+    font-weight: 700;
+    padding: 1rem;
+}
+.volver:hover{
+    letter-spacing: -5px;
+    transition: letter-spacing 0.3s ease;
+}
 
 
 .card {
@@ -66,4 +75,14 @@
     gap: 0.25rem;
     justify-content: flex-start
 }
-
+.recomContainer {
+    width: 95%;
+}
+.resenhasContainer{
+    width: 95%;
+}
+.h2secc{
+    text-align: center;
+    border-bottom: 6px solid rgb(var(--fondoenfasis));
+    margin-bottom: 1rem;
+}

@@ -11,14 +11,14 @@ const Corazones : React.FC<IProps> = ({valoracion}) => {
   const corazonesHuecos = 5 - valoracion;
 
   return (
-    <div>
+    <div className={styles.listaCorazones}>
       {[...Array(corazonesRellenos)].map((_, index) => (
         <Image key={index}
         src="/corazonrelleno.svg"
         alt="corazon relleno"
         className={styles.corazonesRellenos}
         width={100}
-        height={24}
+        height={16}
       />
       ))}
       {[...Array(corazonesHuecos)].map((_, index) => (
@@ -27,7 +27,7 @@ const Corazones : React.FC<IProps> = ({valoracion}) => {
         alt="corazon hueco"
         className={styles.corazonesHuecos}
         width={100}
-        height={24}
+        height={16}
       />
       ))}
     </div>
