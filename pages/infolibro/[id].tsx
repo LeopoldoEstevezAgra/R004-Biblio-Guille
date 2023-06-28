@@ -50,16 +50,6 @@ const InfoLibro = () => {
       throw new Error('No se pudo obtener el libro');
     }
   };
-  /*const fetchresenha = async (cat: string) => {
-    const response = await fetch(`/api/infolibro/resenhas?id=${id}`);
-    if (response.ok) {
-      const data = await response.json();
-      return data as bookType;
-    } else {
-      setLibro(null);
-      throw new Error('No se pudo obtener el libro');
-    }
-  };*/
   const fetchrecom = async (id: string) => {
     const response = await fetch(`/api/infolibro/recomendados?id=${id}`);
     if (response.ok) {

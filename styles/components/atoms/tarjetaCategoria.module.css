@@ -23,16 +23,21 @@
     font-size: var(--font-extrasmall);
 }
 .round{
-    background-color: rgb(var(--fondoenfasis));
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
     margin-right: 5px;
 }
 .smallRound{
-    background-color: rgb(var(--fondoenfasis));
+    ;
     border-radius: 50%;
     width: 0.62rem;
     height: 0.62rem;
     margin-right: 5px;
+}
+.enfasis{
+    background-color: rgb(var(--fondoenfasis));
+}
+.fondo{
+    background-color: rgb(var(--fondo))
 }

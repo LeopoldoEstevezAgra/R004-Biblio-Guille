@@ -40,7 +40,7 @@ const TarjetaLibro: React.FC<BookCardProps> = ({ book }) => {
       </div>
       <div className={styles.cardCategories}>
         {book.categorias.map((categoria) => (
-          <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
+          <TarjetaCategoria enfasis key={categoria.id} nombreCategoria={categoria.nombre} />
         ))}
       </div>
       <div className={styles.cardFooter}>
