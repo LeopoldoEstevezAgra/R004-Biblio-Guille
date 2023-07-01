@@ -140,16 +140,16 @@ const InfoLibro = () => {
           </div>
         </div>
       </main>
-      <div className={styles.recomContainer}>
-        <h2 className={styles.tituloSeccion}>Libros recomendados</h2>
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionTitle}>Libros recomendados</h2>
         <div className={styles.recomendados}>
           {recoms && recoms.length && recoms.map((book: bookType, index) => {
           return (<TarjetaLibroMini key={index} book={book}></TarjetaLibroMini>)
            })}
         </div>
       </div>
-      <div className={styles.resenhasContainer}>
-        <h2 className={styles.tituloSeccion}>Reseñas</h2>
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionTitle}>Reseñas</h2>
         <div>{resenhas && resenhas.length && resenhas.map((resenha: resenhaType, index) => {
           return (<TarjetaResenha key={index} resenha={resenha}/>)
            })}</div>
