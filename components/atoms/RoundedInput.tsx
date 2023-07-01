@@ -26,6 +26,7 @@ const RoundedInput: React.FC<IProps> = ({ icon, onChange }) => {
           /*onChange={(e) => {
             onChange?.(e);
           }}*/
+          //innabilitado por testeo
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           style={{ border: 'none' }}

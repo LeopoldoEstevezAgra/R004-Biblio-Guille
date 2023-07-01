@@ -1,24 +1,24 @@
 .container{
     background-color: rgb(var(--extraenfasis),0.6);
     display: flex;
-    padding: 7px;
+    padding: 0.44rem;
     color: rgb(var(--texto), 0.9);
-    margin-bottom: 5px;
+    margin-bottom:0.3rem;
     width: max-content;
     height: 1.5rem;
-    border-radius: 50px 10px 10px 50px;
+    border-radius: 3.125rem 0.625rem 0.625rem 3.125rem;
     align-items: center;
     font-size: var(--font-small);
 }
 .smallContainer{
     background-color: rgb(var(--extraenfasis),0.6);
     display: flex;
-    padding: 3.5px;
+    padding:0.22rem;
     color: rgb(var(--texto), 0.9);
-    margin-bottom: 5px;
+    margin-bottom:0.3rem;
     width: max-content;
     height: 1.25rem;
-    border-radius: 50px 10px 10px 50px;
+    border-radius: 3.125rem 0.625rem 0.625rem 3.125rem;
     align-items: center;
     font-size: var(--font-extrasmall);
 }
@@ -26,13 +26,13 @@
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
-    margin-right: 5px;
+    margin-right:0.3rem;
 }
 .smallRound{
     border-radius: 50%;
     width: 0.62rem;
     height: 0.62rem;
-    margin-right: 5px;
+    margin-right:0.3rem;
 }
 .enfasis{
     background-color: rgb(var(--fondoenfasis));

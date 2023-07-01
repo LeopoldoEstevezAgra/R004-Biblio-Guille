@@ -4,41 +4,41 @@
     cursor: pointer;
     color: rgb(var(--fondo));
     border: none;
-    padding: 7px;
+    padding: 0.44rem;
     letter-spacing: 1px;
-    width: 92px;
-    border-radius: 5px;
+    width: 5.75rem;
+    border-radius:0.3rem;
 }
 .sBotonPrim{
     background-color: rgb(var(--botonprim));
-    font-size: 10.5px;
+    font-size: var(--font-extrasmall);
     cursor: pointer;
     color: rgb(var(--fondo));
     border: none;
-    padding: 6px;
+    padding: 0.375rem;
     letter-spacing: 0.35px;
     font-weight: 700;
-    width: 64px;
-    border-radius: 2.5px; 
+    width: 4rem;
+    border-radius: 0.16rem; 
 }
 .lBotonSec{
     background-color: rgb(var(--botonsec));
     border: none;
     cursor: pointer;
     color: rgb(var(--texto));
-    padding: 7px;
+    padding: 0.44rem;
     font-weight: 700;
-    width: 92px;
-    border-radius: 5px;
+    width: 5.75rem;
+    border-radius:0.3rem;
 }
 .sBotonSec{
     background-color: rgb(var(--botonsec));
     border: none;
     cursor: pointer;
     color: rgb(var(--texto));
-    font-size: 10.5px;
-    padding: 6px;
+    font-size: var(--font-extrasmall);
+    padding: 0.375rem;
     font-weight: 700;
-    width: 64px; 
-    border-radius: 2.5px;
+    width: 4rem; 
+    border-radius: 0.16rem;
 }

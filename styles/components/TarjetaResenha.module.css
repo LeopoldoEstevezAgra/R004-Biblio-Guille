@@ -1,7 +1,7 @@
 .card{
     margin-top: 1rem;
-    padding-left: 6px;
-    border-left: 3px solid rgb(var(--fondoenfasis));
+    padding-left: 0.375rem;
+    border-left: 0.19rem solid rgb(var(--fondoenfasis));
 }
 .cardHeader{
     display: flex;

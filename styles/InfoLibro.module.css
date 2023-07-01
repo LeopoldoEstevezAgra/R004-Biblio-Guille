@@ -1,11 +1,12 @@
-.volver{
+.botonVolver{
     border: none;
     font-size: 24px;
     background-color: rgb(var(--fondo));
     font-weight: 700;
     padding: 1rem;
+    transition: letter-spacing 0.3s ease;
 }
-.volver:hover{
+.botonVolver:hover{
     letter-spacing: -5px;
     transition: letter-spacing 0.3s ease;
 }
@@ -19,15 +20,15 @@
         'foot sinopsis';
     grid-template-columns: clamp(150px, 45% ,450px) clamp(150px, 55% ,auto);
 
-    -webkit-box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
-    box-shadow: 10px 12px 16px 4px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 0.625rem 12px 16px 4px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0.625rem 12px 16px 4px rgba(0, 0, 0, 0.11);
+    box-shadow: 0.625rem 12px 16px 4px rgba(0, 0, 0, 0.11);
     width: 95%;
 }
 
 .cardImage {
     grid-area: img;
-    margin: 5px;
+    margin:0.3rem;
     display: flex;
 }
 
@@ -53,7 +54,7 @@
     grid-area: cat;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap:0.3rem;
 }
 .sinopsis{
     grid-area: sinopsis;
@@ -81,8 +82,8 @@
 .resenhasContainer{
     width: 95%;
 }
-.h2secc{
+.tituloSeccion{
     text-align: center;
-    border-bottom: 6px solid rgb(var(--fondoenfasis));
+    border-bottom: 0.375rem solid rgb(var(--fondoenfasis));
     margin-bottom: 1rem;
 }

@@ -14,3 +14,4 @@ const PedirBoton: React.FC<Props> = ({ small }) => {
 };
 
 export default PedirBoton;
+
