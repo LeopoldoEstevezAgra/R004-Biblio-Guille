@@ -34,18 +34,19 @@ const TarjetaLibroMini: React.FC<BookCardProps> = ({ book }) => {
                 </div>
                 <div className={styles.cardCategories}>
                     {book.categorias.map((categoria) => (
-                        <TarjetaCategoria size='small' color='fondo' key={categoria.id} nombreCategoria={categoria.nombre} />
+                        <TarjetaCategoria
+                            size="small"
+                            color="fondo"
+                            key={categoria.id}
+                            nombreCategoria={categoria.nombre}
+                        />
                     ))}
                 </div>
                 <div className={styles.cardFooter}>
                     <Link href="/infolibro/[id]" as={`/infolibro/${book.id}`}>
-                    <Button variant="secondary">
-                        Más info.
-                    </Button>
+                        <Button variant="secondary">Más info.</Button>
                     </Link>
-                    <Button>
-                        Añadir
-                    </Button>
+                    <Button>Añadir</Button>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ interface IProps {
     size?: 'small' | 'large';
     color?: 'fondo' | 'enfasis';
     className?: string;
-};
+}
 
 const TarjetaCategoria: React.FC<IProps> = ({
     nombreCategoria,
@@ -19,7 +19,9 @@ const TarjetaCategoria: React.FC<IProps> = ({
 
     return (
         <div className={`${styles[containerClass]} ${className}`}>
-            <div className={`${styles[perforationClass]} ${styles[color]} ${className}`}></div>
+            <div
+                className={`${styles[perforationClass]} ${styles[color]} ${className}`}
+            ></div>
             <span>{nombreCategoria}</span>
         </div>
     );

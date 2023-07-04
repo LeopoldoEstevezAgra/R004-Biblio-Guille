@@ -1,12 +1,12 @@
-.corazonesRellenos{
+.corazonesRellenos {
     width: 16px;
     height: 16px;
 }
-.corazonesHuecos{
+.corazonesHuecos {
     width: 16px;
     height: 16px;
 }
-.listaCorazones{
+.listaCorazones {
     display: flex;
     width: 88px;
     justify-content: space-between;

@@ -1,42 +1,42 @@
-.largeContainer{
-    background-color: rgb(var(--extraenfasis),0.6);
+.largeContainer {
+    background-color: rgb(var(--extraenfasis), 0.6);
     display: flex;
     padding: 0.44rem;
     color: rgb(var(--texto), 0.9);
-    margin-bottom:0.3rem;
+    margin-bottom: 0.3rem;
     width: max-content;
     height: 1.5rem;
     border-radius: 3.125rem 0.625rem 0.625rem 3.125rem;
     align-items: center;
     font-size: var(--font-small);
 }
-.smallContainer{
-    background-color: rgb(var(--extraenfasis),0.6);
+.smallContainer {
+    background-color: rgb(var(--extraenfasis), 0.6);
     display: flex;
-    padding:0.22rem;
+    padding: 0.22rem;
     color: rgb(var(--texto), 0.9);
-    margin-bottom:0.3rem;
+    margin-bottom: 0.3rem;
     width: max-content;
     height: 1.25rem;
     border-radius: 3.125rem 0.625rem 0.625rem 3.125rem;
     align-items: center;
     font-size: var(--font-extrasmall);
 }
-.largeRound{
+.largeRound {
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;
-    margin-right:0.3rem;
+    margin-right: 0.3rem;
 }
-.smallRound{
+.smallRound {
     border-radius: 50%;
     width: 0.62rem;
     height: 0.62rem;
-    margin-right:0.3rem;
+    margin-right: 0.3rem;
 }
-.enfasis{
+.enfasis {
     background-color: rgb(var(--fondoenfasis));
 }
-.fondo{
-    background-color: rgb(var(--fondo))
+.fondo {
+    background-color: rgb(var(--fondo));
 }

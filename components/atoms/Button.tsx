@@ -9,7 +9,7 @@ interface IProps {
     variant?: 'primary' | 'secondary';
     className?: string;
     sx?: React.CSSProperties;
-};
+}
 
 const Button: React.FC<IProps> = ({
     children,
@@ -17,13 +17,13 @@ const Button: React.FC<IProps> = ({
     size = 'large',
     variant = 'primary',
     className = '',
-    sx = {}
+    sx = {},
 }) => {
     return (
-        <button 
+        <button
             className={`${styles[size]} ${styles[variant]} ${className}`}
             style={sx}
-            onClick={(e) => onClick?.(e) }
+            onClick={(e) => onClick?.(e)}
         >
             {children}
         </button>
