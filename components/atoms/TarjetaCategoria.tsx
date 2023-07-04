@@ -4,14 +4,14 @@ import styles from '@/styles/components/atoms/tarjetaCategoria.module.css';
 interface IProps {
     nombreCategoria?: string;
     size?: 'small' | 'large';
-    color?: 'fondo' | 'enfasis';
+    modo?: 'fondo' | 'enfasis';
     className?: string;
 }
 
 const TarjetaCategoria: React.FC<IProps> = ({
     nombreCategoria,
     size = 'large',
-    color = 'enfasis',
+    modo = 'enfasis',
     className = '',
 }) => {
     const perforationClass = `${size}Round`;
@@ -20,7 +20,7 @@ const TarjetaCategoria: React.FC<IProps> = ({
     return (
         <div className={`${styles[containerClass]} ${className}`}>
             <div
-                className={`${styles[perforationClass]} ${styles[color]} ${className}`}
+                className={`${styles[perforationClass]} ${styles[modo]} ${className}`}
             ></div>
             <span>{nombreCategoria}</span>
         </div>

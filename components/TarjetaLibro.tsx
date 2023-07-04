@@ -44,7 +44,7 @@ const TarjetaLibro: React.FC<BookCardProps> = ({ book }) => {
             <div className={styles.cardCategories}>
                 {book.categorias.map((categoria) => (
                     <TarjetaCategoria
-                        color="enfasis"
+                        modo="enfasis"
                         key={categoria.id}
                         nombreCategoria={categoria.nombre}
                     />

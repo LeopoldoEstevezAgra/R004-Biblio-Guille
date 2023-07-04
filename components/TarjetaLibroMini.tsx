@@ -36,7 +36,7 @@ const TarjetaLibroMini: React.FC<BookCardProps> = ({ book }) => {
                     {book.categorias.map((categoria) => (
                         <TarjetaCategoria
                             size="small"
-                            color="fondo"
+                            modo="fondo"
                             key={categoria.id}
                             nombreCategoria={categoria.nombre}
                         />
