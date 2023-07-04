@@ -1,4 +1,4 @@
-.container{
+.largeContainer{
     background-color: rgb(var(--extraenfasis),0.6);
     display: flex;
     padding: 0.44rem;
@@ -22,7 +22,7 @@
     align-items: center;
     font-size: var(--font-extrasmall);
 }
-.round{
+.largeRound{
     border-radius: 50%;
     width: 0.75rem;
     height: 0.75rem;

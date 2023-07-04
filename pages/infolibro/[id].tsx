@@ -5,10 +5,10 @@ import Link from 'next/link';
 import styles from '@/styles/InfoLibro.module.css';
 
 
-import PedirBoton from '@/components/atoms/PedirBoton';
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
 import TarjetaLibroMini from '@/components/TarjetaLibroMini';
 import TarjetaResenha from '@/components/TarjetaResenha';
+import Button from '@/components/atoms/Button';
 
 type bookType = {
   id: number;
@@ -131,12 +131,14 @@ const InfoLibro = () => {
           </div>
           <div className={styles.cardCategories}>
             {libro.categorias.map((categoria) => (
-              <TarjetaCategoria key={categoria.id} nombreCategoria={categoria.nombre} />
+              <TarjetaCategoria color='fondo' key={categoria.id} nombreCategoria={categoria.nombre} />
             ))}
           </div>
           <div className={styles.sinopsis}>{libro.sinopsis}</div>
           <div className={styles.cardFooter}>
-            <PedirBoton />
+            <Button>
+          Añadir
+        </Button>
           </div>
         </div>
       </main>

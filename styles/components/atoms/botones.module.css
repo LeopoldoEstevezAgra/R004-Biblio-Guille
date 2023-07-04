@@ -1,5 +1,5 @@
 
-.largueBotonPrimario{
+.largeBotonPrimario{
     background-color: rgb(var(--botonprim));
     cursor: pointer;
     color: rgb(var(--fondo));
@@ -21,7 +21,7 @@
     width: 4rem;
     border-radius: 0.16rem; 
 }
-.largueBotonSecundario{
+.largeBotonSecundario{
     background-color: rgb(var(--botonsec));
     border: none;
     cursor: pointer;
@@ -41,4 +41,34 @@
     font-weight: 700;
     width: 4rem; 
     border-radius: 0.16rem;
+}
+
+.large {
+    border: none;
+    cursor: pointer;
+    padding: 0.44rem;
+    width: 5.75rem;
+    border-radius:0.3rem;
+}
+
+.small {
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-extrasmall);
+    padding: 0.375rem;
+    font-weight: 700;
+    width: 4rem; 
+    border-radius: 0.16rem;
+}
+
+.primary {
+    background-color: rgb(var(--botonprim));
+    color: rgb(var(--fondo));
+    letter-spacing: 1px;
+}
+
+.secondary {
+    background-color: rgb(var(--botonsec));
+    color: rgb(var(--texto));
+    font-weight: 700;
 }

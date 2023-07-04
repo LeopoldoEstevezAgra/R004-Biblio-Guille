@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
-import InfBoton from '@/components/atoms/InfBoton';
-import PedirBoton from '@/components/atoms/PedirBoton';
+import Button from '@/components/atoms/Button';
+
 
 import styles from '@/styles/components/TarjetaLibro.module.css';
 
@@ -45,9 +45,16 @@ const TarjetaLibro: React.FC<BookCardProps> = ({ book }) => {
       </div>
       <div className={styles.cardFooter}>
         <Link href="/infolibro/[id]" as={`/infolibro/${book.id}`}>
-          <InfBoton />
+        <Button
+          variant="secondary"
+        >
+          Más info.
+        </Button>
         </Link>
-        <PedirBoton />
+        <Button>
+          Añadir
+        </Button>
+        
       </div>
     </div>
   );
