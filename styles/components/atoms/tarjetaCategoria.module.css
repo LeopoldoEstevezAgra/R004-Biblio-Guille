@@ -34,9 +34,9 @@
     height: 0.62rem;
     margin-right: 0.3rem;
 }
-.enfasis {
+.accent {
     background-color: rgb(var(--fondoenfasis));
 }
-.fondo {
+.background {
     background-color: rgb(var(--fondo));
 }

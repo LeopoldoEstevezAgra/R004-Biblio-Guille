@@ -29,7 +29,7 @@ const TarjetaLibro: React.FC<BookCardProps> = ({ book }) => {
         <div className={styles.card} key={book.id}>
             <div className={styles.cardImage}>
                 <img
-                    className={styles.portada}
+                    className={styles.cover}
                     src={book.portada}
                     alt="portada"
                 />

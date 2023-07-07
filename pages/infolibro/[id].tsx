@@ -134,7 +134,7 @@ const InfoLibro = () => {
                     <div className={styles.cardCategories}>
                         {libro.categorias.map((categoria) => (
                             <TarjetaCategoria
-                                modo="fondo"
+                                modo="background"
                                 key={categoria.id}
                                 nombreCategoria={categoria.nombre}
                             />

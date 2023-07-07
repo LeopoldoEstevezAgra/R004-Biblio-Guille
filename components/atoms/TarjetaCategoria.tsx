@@ -4,7 +4,7 @@ import styles from '@/styles/components/atoms/tarjetaCategoria.module.css';
 interface IProps {
     nombreCategoria?: string;
     size?: 'small' | 'large';
-    modo?: 'fondo' | 'enfasis';
+    modo?: 'background' | 'accent';
     className?: string;
 }
 
