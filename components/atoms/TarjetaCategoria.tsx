@@ -11,7 +11,7 @@ interface IProps {
 const TarjetaCategoria: React.FC<IProps> = ({
     nombreCategoria,
     size = 'large',
-    modo = 'enfasis',
+    modo = 'accent',
     className = '',
 }) => {
     const perforationClass = `${size}Round`;
