@@ -2,8 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import TarjetaCategoria from '@/components/atoms/TarjetaCategoria';
-import InfBoton from '@/components/atoms/InfBoton';
-import PedirBoton from '@/components/atoms/PedirBoton';
+import Button from '@/components/atoms/Button';
 
 import styles from '@/styles/components/TarjetaLibroMini.module.css';
 
@@ -35,14 +34,19 @@ const TarjetaLibroMini: React.FC<BookCardProps> = ({ book }) => {
                 </div>
                 <div className={styles.cardCategories}>
                     {book.categorias.map((categoria) => (
-                        <TarjetaCategoria small key={categoria.id} nombreCategoria={categoria.nombre} />
+                        <TarjetaCategoria
+                            size="small"
+                            modo="background"
+                            key={categoria.id}
+                            nombreCategoria={categoria.nombre}
+                        />
                     ))}
                 </div>
                 <div className={styles.cardFooter}>
                     <Link href="/infolibro/[id]" as={`/infolibro/${book.id}`}>
-                        <InfBoton small/>
+                        <Button variant="secondary">Más info.</Button>
                     </Link>
-                    <PedirBoton small />
+                    <Button>Añadir</Button>
                 </div>
             </div>
         </div>

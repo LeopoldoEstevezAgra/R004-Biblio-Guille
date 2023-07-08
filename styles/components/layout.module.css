@@ -7,8 +7,8 @@
 }
 
 .topbar {
-    height: 5rem;
-    background-color: rgb(var(--color-primary));
+    height: 3.75rem;
+    background-color: rgb(var(--extraenfasis));
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -18,15 +18,15 @@
 }
 
 .topbarButton {
-    width: 3rem;
-    height: 3rem;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
-    background-color: rgb(var(--color-white));
+    background-color: rgb(var(--blanco));
     outline: none;
     border: none;
     cursor: pointer;
 
-    padding: 0.8rem;
+    padding: 0.6rem;
 
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 .topbarButtonCart {
-    padding: 0.6rem;
+    padding: 0.45rem;
 }
 
 .content {

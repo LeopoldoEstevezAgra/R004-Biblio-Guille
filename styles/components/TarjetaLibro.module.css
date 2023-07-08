@@ -1,54 +1,55 @@
 .card {
-    width: 400px;
-    height: 300px;
+    width: 20rem;
+    height: 18.75rem;
     display: grid;
-    grid-template-areas: 'img cont'
-                        'img cat'
-                        'img foot';
-    background-color: rgb(var(--color-accent));
-    border: 0.25rem solid rgb(var(--color-tertiary));
-    border-radius: 2rem;
-  
-    -webkit-box-shadow: 10px 12px 16px 4px rgba(0,0,0,0.11);
-    -moz-box-shadow: 10px 12px 16px 4px rgba(0,0,0,0.11);
-    box-shadow: 10px 12px 16px 4px rgba(0,0,0,0.11);
-  
-  }
-  
-  .cardImage {
+    grid-template-areas:
+        'img cont'
+        'img cat'
+        'img foot';
+    background-color: rgb(var(--fondoenfasis));
+    border-radius: 1rem;
+
+    /*-webkit-box-shadow: 0.625rem 12px 16px 4px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0.625rem 12px 16px 4px rgba(0,0,0,0.11);
+    box-shadow: 0.625rem 12px 16px 4px rgba(0,0,0,0.11);*/
+}
+
+.cardImage {
     grid-area: img;
-    width: 150px;
-    margin: 5px;
+    width: 7.5rem;
+    margin: 0.3rem;
     display: flex;
-  }
-  .portada{
-    width: 150px;
+}
+.cover {
+    width: 7.5rem;
     align-items: center;
     justify-content: center;
-  }
-  
-  .cardContent {
+}
+
+.cardContent {
     grid-area: cont;
     flex: 1;
     padding: 0.2rem;
     display: flex;
     flex-direction: column;
-    width: 200px;
-  }
-  .cardTitle {
+    width: 11.25rem;
+}
+.cardTitle {
     margin-bottom: 0.5rem;
-  }
-  
-  .cardCategories{
+}
+
+.cardCategories {
     grid-area: cat;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .cardFooter{
+    gap: 0.3rem;
+}
+
+.cardFooter {
     grid-area: foot;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin: 0px 0.3rem 0.6rem 0px;
     justify-content: space-around;
-  }
+    gap: 0.125rem;
+}
